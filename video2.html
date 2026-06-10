@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM_ERROR_LEVEL_1</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #ff3333;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        .error-container {
+            text-align: center;
+            animation: flicker 0.15s infinite alternate;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 5px;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px #00ffff;
+        }
+
+        p {
+            color: #888;
+            font-size: 1rem;
+        }
+
+        /* The Hidden Hint Link in the Corner */
+        .hidden-hint {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            color: #1a1a1a; /* Blends almost perfectly with the background */
+            text-decoration: none;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        /* Reveals slightly when hovered over */
+        .hidden-hint:hover {
+            color: #333333;
+            text-shadow: 0 0 2px #ff3333;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.95; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="error-container">
+        <h1>SIGNAL_LOST</h1>
+        <p>RE-ROUTING TO TARGET DESTINATION... FAILED.</p>
+    </div>
+
+    <div class="hidden-hint" onclick="revealHint()">[SYS_LOG_02]</div>
+
+    <script>
+        function revealHint() {
+            alert("LOG ENTRY - TIMESTAMP: UNKNOWN\n\n'I found a closet door on the wall, but when I pulled it open, there was nothing behind it but solid yellow drywall. The music from the party is gone. If anyone finds this camera... I didn't mean to leave.'");
+        }
+    </script>
+
+</body>
+</html>
